@@ -5,7 +5,6 @@ Gives a nice baseline around what BaseSolver can do
 '''
 
 from . import base
-import random
 
 class SimplestSolver(base.BaseSolver):
 	alg = lambda self : self.words[0]
