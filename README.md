@@ -14,8 +14,9 @@ Wordle is interesting from the perspective of algorithm design: it's easy enough
 - `game.py` has a Wordle implementation.
 - Put your algorithms in `solvers`. They must either inherit `BaseSolver` (you should read it) or be compatible with it (must have `reset` and `set`). Have a look at `SimplestSolver`.
 - Change `solvers/__init__.py` to include your algorithm.
-- `winrate.py` banchmarks your solver.
+- Use `interactive.py` to test a solver.
+- `winrate.py` banchmarks a solver.
 
-The game implementation will return a ternary string. 0 is for gray, 1 is for yellow, 2 is for green. Pretty straightforward.
+The game implementation works with ternary strings. 0 is for gray, 1 is for yellow, 2 is for green. Pretty straightforward.
 
 `self.words`, from BaseSolver, changes on each new input. `self.origwords` doesn't.

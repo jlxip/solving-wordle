@@ -19,7 +19,7 @@ class BaseSolver:
 
 	def __init__(self, path, debug=False):
 		self.debugEnabled = debug
-		self.origwords = common.words()
+		self.origwords = common.words(path)
 		self.reset()
 
 		# You should set initial current here!
@@ -89,20 +89,3 @@ class BaseSolver:
 
 		self.current = self.alg()
 		return False
-
-	def interactive():
-		if len(sys.argv) != 2:
-			print('Give dictionary as parameter')
-			return
-
-		solver = WordleSolver(sys.argv[1], True)
-		while True:
-			cur = solver.get()
-			print(cur)
-			res = solver.set(input('>: '))
-			if res:
-				print('Got it! Word is:', solver.get())
-				break
-			elif res is None:
-				print('Word is not in the dictionary. You\'re on your own. Good luck.')
-				break
