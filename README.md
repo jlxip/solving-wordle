@@ -20,3 +20,8 @@ Wordle is interesting from the perspective of algorithm design: it's easy enough
 The game implementation works with ternary strings. 0 is for gray, 1 is for yellow, 2 is for green. Pretty straightforward.
 
 `self.words`, from BaseSolver, changes on each new input. `self.origwords` doesn't.
+
+## Given solvers
+- Simplest: picks the first candidate given the previous knowledge.
+- Random: picks a random word from the whole dictionary.
+- Heuristic: explore the wordspace, picking the most diverse word, until there's few candidates.
