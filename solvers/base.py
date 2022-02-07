@@ -57,7 +57,7 @@ class BaseSolver:
 					self.debug('There\'s a %c, not in position %d' % (cur.upper(), idx+1))
 
 	# Update candidates with new knowledge
-	def updateWords(self):
+	def updateWords(self, sort=True):
 		# Words with known letters
 		for i in self.known:
 			self.words = [j for j in self.words if i in j]
@@ -72,7 +72,7 @@ class BaseSolver:
 		for i in self.knownnot:
 			self.words = [j for j in self.words if all([k not in j for k in self.knownnot])]
 		# Must make it deterministic you know
-		self.words.sort()
+		if sort: self.words.sort()
 
 	def set(self, code):
 		self.learn(self.current, code)

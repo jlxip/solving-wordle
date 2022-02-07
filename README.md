@@ -25,3 +25,4 @@ The game implementation works with ternary strings. 0 is for gray, 1 is for yell
 - Simplest: picks the first candidate given the previous knowledge.
 - Random: picks a random word from the whole dictionary.
 - Heuristic: explore the wordspace, picking the most diverse word, until there's few candidates.
+- Entropy: choses the word that maximizes entropy.
